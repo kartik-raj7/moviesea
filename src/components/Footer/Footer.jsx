@@ -1,0 +1,12 @@
+import React from 'react'
+
+const Footer = () => {
+  return (
+    <div className='footer'>
+        <div>MovieSea</div>
+        <div>©MovieSea 2022 </div>
+    </div>
+  )
+}
+
+export default Footer;
