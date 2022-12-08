@@ -6,10 +6,13 @@ import {useDispatch} from "react-redux"
 import { addMovies,fetchAsyncMovies, fetchAsyncShows} from '../../features/movies/MovieSlice';
 const Home = () => {
   const dispatch = useDispatch();
+  const movie = "Avengers";
+  const Show = "Friends";
   useEffect(()=>{
+
     // console.log("The Response From API",resp);
-    dispatch(fetchAsyncMovies());
-    dispatch(fetchAsyncShows())
+    dispatch(fetchAsyncMovies(movie));
+    dispatch(fetchAsyncShows(Show));
   },[dispatch]);
   return (
     <div>

@@ -3,15 +3,13 @@ import MovieApi from "../../basic/api/MovieApi";
 import {APIKey} from "../../basic/api/MovieApiKey";
 import {useDispatch} from "react-redux"
 export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies',
-async () =>{
-    const movie = "Guardians";
-    const resp = await MovieApi.get(`?apiKey=${APIKey}&s=${movie}&type=movie`)
+async (search) =>{
+    const resp = await MovieApi.get(`?apiKey=${APIKey}&s=${search}&type=movie`)
     return resp.data;
 });
 export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows',
-async () =>{
-    const show = "Friends";
-    const resp = await MovieApi.get(`?apiKey=${APIKey}&s=${show}&type=series`)
+async (search) =>{
+    const resp = await MovieApi.get(`?apiKey=${APIKey}&s=${search}&type=series`)
     return resp.data;
 });
 export const fetchAsyncMSDetail = createAsyncThunk('movies/fetchAsyncMSDetail',

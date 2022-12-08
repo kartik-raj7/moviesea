@@ -1,16 +1,20 @@
 @import "../../basic/colours.scss";
 
-.movie-list{
+.movie-list,.shows-list{
     margin: 20px 0px;
+    padding: 2px 10px 10px 10px;
      h2{
         color:$font-primary;
         margin-bottom: 10px;
         font-weight: 400;
     };
 }
-.movie-container{
-    display: grid;
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-    grid-gap: 25px;
-    padding-bottom: 100px;
-}
+// .shows-container{
+//     display: grid;
+//     grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+//     grid-gap: 25px;
+//     padding-bottom: 100px;
+// }
+// .movie-container{
+//     padding-left: 2px;
+// }
